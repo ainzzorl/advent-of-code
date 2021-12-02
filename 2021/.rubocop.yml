@@ -6,3 +6,4 @@ Style/FrozenStringLiteralComment:
 
 AllCops:
   SuggestExtensions: false
+  NewCops: disable

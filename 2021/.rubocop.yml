@@ -7,3 +7,6 @@ Style/FrozenStringLiteralComment:
 AllCops:
   SuggestExtensions: false
   NewCops: disable
+
+Naming/VariableNumber:
+  Enabled: false

@@ -3,12 +3,11 @@ defmodule AdventOfCode.Day02Test do
 
   import AdventOfCode.Day02
 
-  @tag :skip
   test "part1" do
-    input = nil
+    input = ["forward 5", "down 5", "forward 8", "up 3", "down 8", "forward 2"]
     result = part1(input)
 
-    assert result
+    assert result == 150
   end
 
   @tag :skip

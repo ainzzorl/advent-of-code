@@ -5,7 +5,7 @@ defmodule Mix.Tasks.D01.P2 do
 
   @shortdoc "Day 01 Part 2"
   def run(args) do
-    {:ok, contents} = File.read("../../ruby/2021/inputs/day01")
+    {:ok, contents} = File.read("../inputs/day01")
     lines = contents |> String.split("\n", trim: true)
     input = Enum.map(lines, fn s -> Integer.parse(s) |> elem(0) end)
 

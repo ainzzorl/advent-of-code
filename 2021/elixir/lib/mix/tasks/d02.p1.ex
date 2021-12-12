@@ -5,7 +5,7 @@ defmodule Mix.Tasks.D02.P1 do
 
   @shortdoc "Day 02 Part 1"
   def run(args) do
-    {:ok, contents} = File.read("../../ruby/2021/inputs/day02")
+    {:ok, contents} = File.read("../inputs/day02")
     input = contents |> String.split("\n", trim: true)
 
     if Enum.member?(args, "-b"),

@@ -5,7 +5,7 @@ RSpec.describe 'p01' do
     end
 
     it 'solves the real input' do
-      input = AOC.read_ints_from_file('inputs/day01')
+      input = AOC.read_ints_from_file('../inputs/day01')
       expect(AOC.p01_1(input)).to eq 1559
     end
   end
@@ -16,7 +16,7 @@ RSpec.describe 'p01' do
     end
 
     it 'solves the real input' do
-      input = AOC.read_ints_from_file('inputs/day01')
+      input = AOC.read_ints_from_file('../inputs/day01')
       expect(AOC.p01_2(input)).to eq 1600
     end
   end

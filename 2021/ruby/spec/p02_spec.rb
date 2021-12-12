@@ -12,7 +12,7 @@ RSpec.describe 'p02' do
     end
 
     it 'solves the real input' do
-      input = AOC.read_strings_from_file('inputs/day02')
+      input = AOC.read_strings_from_file('../inputs/day02')
       expect(AOC.p02_1(input)).to eq 1_962_940
     end
   end
@@ -30,7 +30,7 @@ RSpec.describe 'p02' do
     end
 
     it 'solves the real input' do
-      input = AOC.read_strings_from_file('inputs/day02')
+      input = AOC.read_strings_from_file('../inputs/day02')
       expect(AOC.p02_2(input)).to eq 1_813_664_422
     end
   end

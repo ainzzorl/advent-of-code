@@ -6,5 +6,8 @@ defmodule AdventOfCode.Day01 do
   end
 
   def part2(args) do
+    args |> Enum.chunk_every(3, 1, :discard)
+         |> Enum.map(fn c -> Enum.sum(c) end)
+         |> part1
   end
 end

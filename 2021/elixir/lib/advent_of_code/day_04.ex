@@ -1,5 +1,13 @@
 defmodule AdventOfCode.Day04 do
   def part1(args) do
+    solve_problem(args, true)
+  end
+
+  def part2(args) do
+    solve_problem(args, false)
+  end
+
+  defp solve_problem(args, minimize) do
     called_str =
       args
       |> Enum.at(0)
@@ -18,8 +26,13 @@ defmodule AdventOfCode.Day04 do
       boards
       |> Enum.map(fn board -> solve(board, called) end)
 
-    [score, _] = solved |> Enum.min_by(fn [_s, i] -> i end)
-    score
+    if minimize do
+      [score, _] = solved |> Enum.min_by(fn [_s, i] -> i end)
+      score
+    else
+      [score, _] = solved |> Enum.max_by(fn [_s, i] -> i end)
+      score
+    end
   end
 
   defp get_board(args, i) do
@@ -99,8 +112,5 @@ defmodule AdventOfCode.Day04 do
 
       Enum.all?(row) || Enum.all?(col)
     end)
-  end
-
-  def part2(_args) do
   end
 end

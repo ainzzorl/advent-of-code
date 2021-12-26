@@ -5,7 +5,8 @@ defmodule Mix.Tasks.D04.P2 do
 
   @shortdoc "Day 04 Part 2"
   def run(args) do
-    input = nil
+    {:ok, contents} = File.read("../inputs/day04")
+    input = contents |> String.split("\n")
 
     if Enum.member?(args, "-b"),
       do: Benchee.run(%{part_2: fn -> input |> part2() end}),

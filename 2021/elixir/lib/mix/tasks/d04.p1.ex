@@ -7,7 +7,6 @@ defmodule Mix.Tasks.D04.P1 do
   def run(args) do
     {:ok, contents} = File.read("../inputs/day04")
     input = contents |> String.split("\n")
-    IO.inspect(input)
 
     if Enum.member?(args, "-b"),
       do: Benchee.run(%{part_1: fn -> input |> part1() end}),
